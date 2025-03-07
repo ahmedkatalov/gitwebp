@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     index: './src/scripts/index.js',
     menu: './src/scripts/menu.js',
+    contact: "./src/scripts/contact.js"
   },
   output: {
     filename: "scripts/[name].js",
@@ -39,6 +40,11 @@ module.exports = {
       filename: 'menu.html',
       template: './src/pages/menu.html',
       chunks: ['menu'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'contact.html',
+      template: './src/pages/contact.html',
+      chunks: ['contact'],
     }),
     new CopyWebpackPlugin({
       patterns: [{ from: 'src/assets', to: 'assets' }],
